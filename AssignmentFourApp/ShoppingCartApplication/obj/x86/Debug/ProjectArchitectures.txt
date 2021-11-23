@@ -1,0 +1,1 @@
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\ShoppingCartApplication\ShoppingCartApplication.csproj;x86

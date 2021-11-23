@@ -1,0 +1,8 @@
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\Library.ShoppingCart\bin\Debug\netstandard2.0\Library.ShoppingCart.deps.json
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\Library.ShoppingCart\bin\Debug\netstandard2.0\Library.ShoppingCart.dll
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\Library.ShoppingCart\bin\Debug\netstandard2.0\Library.ShoppingCart.pdb
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\Library.ShoppingCart\obj\Debug\netstandard2.0\Library.ShoppingCart.AssemblyInfoInputs.cache
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\Library.ShoppingCart\obj\Debug\netstandard2.0\Library.ShoppingCart.AssemblyInfo.cs
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\Library.ShoppingCart\obj\Debug\netstandard2.0\Library.ShoppingCart.csproj.CoreCompileInputs.cache
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\Library.ShoppingCart\obj\Debug\netstandard2.0\Library.ShoppingCart.dll
+C:\Users\Daimeun\Desktop\School\C#\AssignmentFourApp\Library.ShoppingCart\obj\Debug\netstandard2.0\Library.ShoppingCart.pdb

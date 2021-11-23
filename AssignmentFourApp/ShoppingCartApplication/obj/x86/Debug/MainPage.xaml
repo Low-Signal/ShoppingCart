@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="ShoppingCartApplication.MainPage"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ShoppingCartApplication"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <TextBox x:ConnectionId='8' Grid.Column="0" Name="searchBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="{Binding Path= SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                    <Button x:ConnectionId='9' Grid.Column="1" x:Name="searchButton" Content="Search" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                           ></Button>
+                </Grid>
+
+                <ListBox x:ConnectionId='6' Grid.Row="1" ItemsSource="{Binding Products}" Background="Gray" SelectedItem="{Binding SelectedProduct, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                                     >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Display}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+            </Grid>
+
+            <ListBox x:ConnectionId='4' Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Cart}" Background="Gray" SelectedItem="{Binding SelectedCartItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                                >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <!--<Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="{Binding Name}" Click="Button_Click"></Button>-->
+                        <TextBlock Text="{Binding UpdateCartString, UpdateSourceTrigger=PropertyChanged}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            
+            <Button x:ConnectionId='2' Grid.Column="0" Content="Checkout" BorderThickness="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                       ></Button>
+            <Button x:ConnectionId='3' Grid.Column="1" Content="Clear Cart" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         ></Button>
+            
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="{Binding SubTotal, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="{Binding Tax, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Text="{Binding Total, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>
+
